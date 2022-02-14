@@ -6,10 +6,16 @@ dprime_thres<- function(n_old, n_new, n_iterations, prob) {
   #' of d' values and selects the value that sits at the proportion level passed
   #' as an argument.
   #' 
-  #' @n_old number of old items in the memory test.
-  #' @n_new number of new items in the memory test.
-  #' @n_iteration number of samples you want to simulate.
+  #' @nold number of old items in the memory test.
+  #' @nnew number of new items in the memory test.
+  #' @niteration number of samples you want to simulate.
   #' @prob probability level.
+  #' 
+  #' @arguments
+  #' 
+  #' 
+  #' @examples 
+  #' dprime_thres(100, 100, 10000,0.95 )
   #
   # Outputs: 
   # - a list with:
