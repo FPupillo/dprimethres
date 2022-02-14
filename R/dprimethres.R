@@ -1,29 +1,25 @@
+#' dprime threshold
+#'
+#' This little function outputs the smallest d' value that is above a certain
+#' probability level over noise. The way it does is by computing a null distribution
+#' of d' values and selects the value that sits at the proportion level passed
+#' as an argument.
+#' 
+#' @param n_old number of old items in the memory test.
+#' @param n_new number of new items in the memory test.
+#' @param n_iterations number of samples you want to simulate.
+#' @param prob probability level.
+#' 
+#' @return a list with:
+#'           thres =   d' value at the probability level in prob
+#'           distribution = null distribution of dprimes
+#' 
+#' @examples 
+#' dprime_thres(100, 100, 10000,0.95 )
+#' 
+#' @export
 dprime_thres<- function(n_old, n_new, n_iterations, prob) {
-  #' dprime threshold
-  #'
-  #' This little function outputs the smallest d' value that is above a certain
-  #' probability level over noise. The way it does is by computing a null distribution
-  #' of d' values and selects the value that sits at the proportion level passed
-  #' as an argument.
-  #' 
-  #' @nold number of old items in the memory test.
-  #' @nnew number of new items in the memory test.
-  #' @niteration number of samples you want to simulate.
-  #' @prob probability level.
-  #' 
-  #' @arguments
-  #' 
-  #' 
-  #' @examples 
-  #' dprime_thres(100, 100, 10000,0.95 )
-  #
-  # Outputs: 
-  # - a list with:
-  #           thres =   d' value at the probability level in prob
-  #           distribution = null distribution of dprimes
-  # 
-  # Authors: Javier Ortiz-Tudela and Francesco Pupillo (Goethe University)
-  # ---------------------------
+
   
   # How many trials in total?
   n_trials = n_old + n_new

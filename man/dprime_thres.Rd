@@ -6,9 +6,27 @@
 \usage{
 dprime_thres(n_old, n_new, n_iterations, prob)
 }
+\arguments{
+\item{n_old}{number of old items in the memory test.}
+
+\item{n_new}{number of new items in the memory test.}
+
+\item{n_iterations}{number of samples you want to simulate.}
+
+\item{prob}{probability level.}
+}
+\value{
+a list with:
+thres =   d' value at the probability level in prob
+distribution = null distribution of dprimes
+}
 \description{
 This little function outputs the smallest d' value that is above a certain
 probability level over noise. The way it does is by computing a null distribution
 of d' values and selects the value that sits at the proportion level passed
 as an argument.
+}
+\examples{
+dprime_thres(100, 100, 10000,0.95 )
+
 }
